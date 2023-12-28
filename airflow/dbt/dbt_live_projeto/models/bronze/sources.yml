@@ -1,0 +1,571 @@
+version: 2
+
+sources:
+  - name: adventureworks-gcp
+    database: lab-treina-01 # gcp project id
+    schema: raw_data # gcp dataset
+    description: Tabelas de origem GCP database AdventureWorks
+    tables:
+      - name: address
+        description: ""
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: ""
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: ""
+          - name: _airbyte_meta
+            data_type: json
+            description: ""
+          - name: city
+            data_type: string
+            description: ""
+          - name: spatiallocation
+            data_type: string
+            description: ""
+          - name: postalcode
+            data_type: string
+            description: ""
+          - name: addressline2
+            data_type: string
+            description: ""
+          - name: modifieddate
+            data_type: datetime
+            description: ""
+          - name: stateprovinceid
+            data_type: int64
+            description: ""
+          - name: addressline1
+            data_type: string
+            description: ""
+          - name: rowguid
+            data_type: string
+            description: ""
+          - name: addressid
+            data_type: int64
+            description: ""
+
+      - name: countryregion
+        description: ""
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: ""
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: ""
+          - name: _airbyte_meta
+            data_type: json
+            description: ""
+          - name: name
+            data_type: string
+            description: ""
+          - name: modifieddate
+            data_type: datetime
+            description: ""
+          - name: countryregioncode
+            data_type: string
+            description: ""
+
+      - name: creditcard
+        description: ""
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: ""
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: ""
+          - name: _airbyte_meta
+            data_type: json
+            description: ""
+          - name: expmonth
+            data_type: int64
+            description: ""
+          - name: expyear
+            data_type: int64
+            description: ""
+          - name: modifieddate
+            data_type: datetime
+            description: ""
+          - name: cardtype
+            data_type: string
+            description: ""
+          - name: cardnumber
+            data_type: string
+            description: ""
+          - name: creditcardid
+            data_type: int64
+            description: ""
+
+      - name: customer
+        description: ""
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: ""
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: ""
+          - name: _airbyte_meta
+            data_type: json
+            description: ""
+          - name: customerid
+            data_type: int64
+            description: ""
+          - name: territoryid
+            data_type: int64
+            description: ""
+          - name: modifieddate
+            data_type: datetime
+            description: ""
+          - name: personid
+            data_type: int64
+            description: ""
+          - name: storeid
+            data_type: int64
+            description: ""
+          - name: rowguid
+            data_type: string
+            description: ""
+
+      - name: person
+        description: ""
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: ""
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: ""
+          - name: _airbyte_meta
+            data_type: json
+            description: ""
+          - name: firstname
+            data_type: string
+            description: ""
+          - name: namestyle
+            data_type: string
+            description: ""
+          - name: businessentityid
+            data_type: int64
+            description: ""
+          - name: emailpromotion
+            data_type: int64
+            description: ""
+          - name: middlename
+            data_type: string
+            description: ""
+          - name: modifieddate
+            data_type: datetime
+            description: ""
+          - name: title
+            data_type: string
+            description: ""
+          - name: suffix
+            data_type: string
+            description: ""
+          - name: persontype
+            data_type: string
+            description: ""
+          - name: rowguid
+            data_type: string
+            description: ""
+          - name: lastname
+            data_type: string
+            description: ""
+          - name: additionalcontactinfo
+            data_type: string
+            description: ""
+          - name: demographics
+            data_type: string
+            description: ""
+
+      - name: product
+        description: ""
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: ""
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: ""
+          - name: _airbyte_meta
+            data_type: json
+            description: ""
+          - name: productline
+            data_type: string
+            description: ""
+          - name: color
+            data_type: string
+            description: ""
+          - name: productid
+            data_type: int64
+            description: ""
+          - name: modifieddate
+            data_type: datetime
+            description: ""
+          - name: finishedgoodsflag
+            data_type: string
+            description: ""
+          - name: rowguid
+            data_type: string
+            description: ""
+          - name: listprice
+            data_type: numeric
+            description: ""
+          - name: discontinueddate
+            data_type: datetime
+            description: ""
+          - name: productmodelid
+            data_type: int64
+            description: ""
+          - name: class
+            data_type: string
+            description: ""
+          - name: standardcost
+            data_type: numeric
+            description: ""
+          - name: daystomanufacture
+            data_type: int64
+            description: ""
+          - name: productsubcategoryid
+            data_type: int64
+            description: ""
+          - name: makeflag
+            data_type: string
+            description: ""
+          - name: weight
+            data_type: numeric
+            description: ""
+          - name: reorderpoint
+            data_type: int64
+            description: ""
+          - name: weightunitmeasurecode
+            data_type: string
+            description: ""
+          - name: size
+            data_type: string
+            description: ""
+          - name: safetystocklevel
+            data_type: int64
+            description: ""
+          - name: productnumber
+            data_type: string
+            description: ""
+          - name: name
+            data_type: string
+            description: ""
+          - name: sellenddate
+            data_type: datetime
+            description: ""
+          - name: sizeunitmeasurecode
+            data_type: string
+            description: ""
+          - name: style
+            data_type: string
+            description: ""
+          - name: sellstartdate
+            data_type: datetime
+            description: ""
+
+      - name: productcategory
+        description: ""
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: ""
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: ""
+          - name: _airbyte_meta
+            data_type: json
+            description: ""
+          - name: productcategoryid
+            data_type: int64
+            description: ""
+          - name: name
+            data_type: string
+            description: ""
+          - name: modifieddate
+            data_type: datetime
+            description: ""
+          - name: rowguid
+            data_type: string
+            description: ""
+
+      - name: productsubcategory
+        description: ""
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: ""
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: ""
+          - name: _airbyte_meta
+            data_type: json
+            description: ""
+          - name: productcategoryid
+            data_type: int64
+            description: ""
+          - name: productsubcategoryid
+            data_type: int64
+            description: ""
+          - name: name
+            data_type: string
+            description: ""
+          - name: modifieddate
+            data_type: datetime
+            description: ""
+          - name: rowguid
+            data_type: string
+            description: ""
+
+      - name: salesorderdetail
+        description: ""
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: ""
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: ""
+          - name: _airbyte_meta
+            data_type: json
+            description: ""
+          - name: productid
+            data_type: int64
+            description: ""
+          - name: salesorderdetailid
+            data_type: int64
+            description: ""
+          - name: modifieddate
+            data_type: datetime
+            description: ""
+          - name: salesorderid
+            data_type: int64
+            description: ""
+          - name: specialofferid
+            data_type: int64
+            description: ""
+          - name: orderqty
+            data_type: int64
+            description: ""
+          - name: unitprice
+            data_type: numeric
+            description: ""
+          - name: rowguid
+            data_type: string
+            description: ""
+          - name: unitpricediscount
+            data_type: numeric
+            description: ""
+          - name: carriertrackingnumber
+            data_type: string
+            description: ""
+
+      - name: salesorderheader
+        description: ""
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: ""
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: ""
+          - name: _airbyte_meta
+            data_type: json
+            description: ""
+          - name: shiptoaddressid
+            data_type: int64
+            description: ""
+          - name: purchaseordernumber
+            data_type: string
+            description: ""
+          - name: billtoaddressid
+            data_type: int64
+            description: ""
+          - name: onlineorderflag
+            data_type: string
+            description: ""
+          - name: freight
+            data_type: numeric
+            description: ""
+          - name: modifieddate
+            data_type: datetime
+            description: ""
+          - name: orderdate
+            data_type: datetime
+            description: ""
+          - name: creditcardid
+            data_type: int64
+            description: ""
+          - name: rowguid
+            data_type: string
+            description: ""
+          - name: creditcardapprovalcode
+            data_type: string
+            description: ""
+          - name: shipdate
+            data_type: datetime
+            description: ""
+          - name: shipmethodid
+            data_type: int64
+            description: ""
+          - name: accountnumber
+            data_type: string
+            description: ""
+          - name: totaldue
+            data_type: numeric
+            description: ""
+          - name: salespersonid
+            data_type: int64
+            description: ""
+          - name: duedate
+            data_type: datetime
+            description: ""
+          - name: subtotal
+            data_type: numeric
+            description: ""
+          - name: customerid
+            data_type: int64
+            description: ""
+          - name: territoryid
+            data_type: int64
+            description: ""
+          - name: salesorderid
+            data_type: int64
+            description: ""
+          - name: revisionnumber
+            data_type: int64
+            description: ""
+          - name: comment
+            data_type: string
+            description: ""
+          - name: currencyrateid
+            data_type: int64
+            description: ""
+          - name: taxamt
+            data_type: numeric
+            description: ""
+          - name: status
+            data_type: int64
+            description: ""
+
+      - name: salesorderheadersalesreason
+        description: ""
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: ""
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: ""
+          - name: _airbyte_meta
+            data_type: json
+            description: ""
+          - name: salesreasonid
+            data_type: int64
+            description: ""
+          - name: modifieddate
+            data_type: datetime
+            description: ""
+          - name: salesorderid
+            data_type: int64
+            description: ""
+
+      - name: salesreason
+        description: ""
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: ""
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: ""
+          - name: _airbyte_meta
+            data_type: json
+            description: ""
+          - name: salesreasonid
+            data_type: int64
+            description: ""
+          - name: name
+            data_type: string
+            description: ""
+          - name: modifieddate
+            data_type: datetime
+            description: ""
+          - name: reasontype
+            data_type: string
+            description: ""
+
+      - name: stateprovince
+        description: ""
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: ""
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: ""
+          - name: _airbyte_meta
+            data_type: json
+            description: ""
+          - name: isonlystateprovinceflag
+            data_type: string
+            description: ""
+          - name: name
+            data_type: string
+            description: ""
+          - name: territoryid
+            data_type: int64
+            description: ""
+          - name: modifieddate
+            data_type: datetime
+            description: ""
+          - name: stateprovinceid
+            data_type: int64
+            description: ""
+          - name: stateprovincecode
+            data_type: string
+            description: ""
+          - name: rowguid
+            data_type: string
+            description: ""
+          - name: countryregioncode
+            data_type: string
+            description: ""
+
+      - name: store
+        description: ""
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: ""
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: ""
+          - name: _airbyte_meta
+            data_type: json
+            description: ""
+          - name: businessentityid
+            data_type: int64
+            description: ""
+          - name: salespersonid
+            data_type: int64
+            description: ""
+          - name: name
+            data_type: string
+            description: ""
+          - name: modifieddate
+            data_type: datetime
+            description: ""
+          - name: rowguid
+            data_type: string
+            description: ""
+          - name: demographics
+            data_type: string
+            description: ""
+

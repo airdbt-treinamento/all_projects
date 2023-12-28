@@ -1,0 +1,14 @@
+dbt_live_projeto:
+  outputs:
+    dev:
+      schema: live_dw
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /opt/airflow/include/gcp/service_account_01.json
+      location: us-east4
+      method: service-account
+      priority: interactive
+      project: lab-treina-01
+      threads: 2
+      type: bigquery
+  target: dev

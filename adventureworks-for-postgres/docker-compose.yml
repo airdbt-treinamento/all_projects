@@ -1,0 +1,18 @@
+version: '2'
+services:
+  db:
+    build: ./
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5433:5432'
+    container_name: postgres
+    networks:
+      - net2
+
+networks:
+  net2:
+    name: net2_bridge
+    driver: bridge

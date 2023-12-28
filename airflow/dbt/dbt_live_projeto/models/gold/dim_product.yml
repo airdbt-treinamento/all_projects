@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: dim_product
+    columns:
+      - name: product_key
+        description: The surrogate key of the product
+        tests:
+          - not_null
+          - unique
+      - name: productid
+        description: The natural key of the product
+        tests:
+          - not_null
+          - unique
+      - name: product_name
+        description: The product name
+        tests:
+          - not_null
+      - name: productnumber
+        description: ""
+      - name: color
+        description: ""
+      - name: class
+        description: ""
+      - name: product_subcategory_name
+        description: ""
+      - name: product_category_name
+        description: ""

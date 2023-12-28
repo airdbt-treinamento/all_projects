@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: fct_order_details
+    columns:
+      - name: salesorderid
+        description: The primary key of the sale
+        tests:
+          - not_null
+      
+      - name: product_fk
+        description: The foreign key of the product
+        tests:
+          - not_null
+
+      - name: customer_fk
+        description: The foreign key of the customer
+        tests:
+          - not_null    
+      
+      - name: shiptoadress_fk
+        description: The foreign key of the shiptoadress
+        tests:
+          - not_null       
+      
+      - name: creditcard_fk
+        description: The foreign key of the creditcard. If no creditcard exists, it was assumed that purchase was made in cash.
+
+      - name: unitprice
+        description: The unit price of the product 
+        tests:
+          - not_null
+
+      - name: orderqty
+        description: The quantity of the product 
+        tests:
+          - not_null
+
+      - name: revenue_wo_taxandfreight
+        description: The revenue obtained by multiplying unitprice and orderqty 
+
+      - name: reason_name_final
+        description: The reason attributed to the sale
+        tests:
+          - not_null 
+
+      - name: orderdate
+        description: The sale's date. Considered as a degenerated dimension. No dimension table created for it.
+        tests:
+          - not_null 
+
+      - name: order_status_name
+        description: The order's status. Considered as a degenerated dimension. No dimension table created for it.
+        tests:
+          - not_null  
+
+
